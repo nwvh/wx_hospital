@@ -2,7 +2,7 @@ Citizen.CreateThread(function ()
     for k,v in pairs(wx.Peds) do
         RequestModel(v.Model)
         while not HasModelLoaded(v.model) do Citizen.Wait(10) end
-        doctor = CreatePed(0,v.Model,v.Coords.x-0.21,v.Coords.y,v.Coords.z-1,v.Heading,true,true)
+        doctor = CreatePed(0,v.Model,v.Coords.x-0.21,v.Coords.y,v.Coords.z-1,v.Heading,false,true)
         FreezeEntityPosition(doctor, true)
         SetEntityInvincible(doctor,true)
         SetBlockingOfNonTemporaryEvents(doctor,true)
